@@ -1,33 +1,20 @@
 TrainingData
 ================
 
-## GitHub Documents
-
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
-
-## Including Code
-
-You can include R code in the document as follows:
-
 ``` r
-summary(cars)
+BenchmarkData <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1r-oelVOoCSLaieIQstDTetCJqJgULjz6Z1y-2NS5sbU/edit?usp=sharing')
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+    ## No encoding supplied: defaulting to UTF-8.
 
-## Including Plots
+``` r
+head(BenchmarkData)
+```
 
-You can also embed plots, for example:
-
-![](TrainingData_files/figure-gfm/pressure-1.png)<!-- -->
-
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+    ##   Benchmark Percentile      Men    Women
+    ## 1    Run 5K       99th 00:18:00 00:20:01
+    ## 2    Run 5K       95th 00:19:36 00:22:21
+    ## 3    Run 5K       90th 00:20:25 00:23:36
+    ## 4    Run 5K       80th 00:21:40 00:25:00
+    ## 5    Run 5K      75th  00:22:09 00:25:43
+    ## 6    Run 5K       60th 00:22:36 00:27:30
